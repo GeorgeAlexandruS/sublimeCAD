@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import Login from '@/views/authentication/Login.vue'
 import Register from '@/views/authentication/Register.vue'
@@ -7,47 +7,95 @@ import TasksAll from '@/views/tasks/TasksAll.vue'
 import TasksCreate from '@/views/tasks/TasksCreate.vue'
 import TasksEdit from '@/views/tasks/TasksEdit.vue'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: './views/tasks',
-    name: 'tasks-all',
-    component: TasksAll
-  },
-  {
-    path: '/tasks/new',
-    name: 'tasks-create',
-    component: TasksCreate
-  },
-  {
-    path: '/tasks:id',
-    name: 'tasks-edit',
-    component: TasksEdit
-  },
-  {
-    path: '/register',
-    name: 'register',
-    component: Register
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: Login
-  },
-  {
-    path: '*',
-    redirect: '/'
-  }
-]
-
-const router = new VueRouter({
-  routes
+const isLoggedIn = false;
+const routes = new Router({
+  routes: [{
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/@/views/tasks',
+      name: 'tasks-all',
+      component: TasksAll,
+      beforeEnter: (toolbar, from, next) => {
+        if (isLoggedIn) {
+          next();
+        } else {
+          next('/login');
+        }
+      }
+    },
+    {
+      path: '/tasks/new',
+      name: 'tasks-create',
+      component: TasksCreate,
+      beforeEnter: (toolbar, from, next) => {
+        if (isLoggedIn) {
+          next();
+        } else {
+          next('/login');
+        }
+      }
+    },
+    {
+      path: '/tasks:id',
+      name: 'tasks-edit',
+      component: TasksEdit,
+      beforeEnter: (to, from, next) => {
+        if (isLoggedIn) {
+          next();
+        } else {
+          next('/login');
+        }
+      }
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register,
+      beforeEnter: (to, from, next) => {
+        if (!isLoggedIn) {
+          next();
+        } else {
+          next('/');
+        }
+      }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+      beforeEnter: (toolbar, from, next) => {
+        if (!isLoggedIn) {
+          next();
+        } else {
+          next('/');
+        }
+      }
+    },
+    {
+      path: '*',
+      redirect: '/'
+    }
+  ],
+  linkActiveClass: 'active',
+  mode: 'history'
 })
 
-export default router
+// routes.beforeEach(to, from, next) => {
+// //Evaluate condition
+// //next('/home');
+// //next(false);
+// //if (isLoggedIn) {
+//   next();
+// } else {
+//   next('/login');
+// }
+
+//});
+
+
+export default routes;

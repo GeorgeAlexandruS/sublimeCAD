@@ -36,7 +36,7 @@
                     <li class="nav-item">
                         <!-- Display the current user's username in the navbar -->
                         <a class="nav-link" href="#">
-                            {{ this.$store.state.username ? this.$store.state.username : 'Hi George' }}
+                            {{ this.$store.state.username ? this.$store.state.username : 'User' }}
                         </a>
                     </li>
                 </ul>
