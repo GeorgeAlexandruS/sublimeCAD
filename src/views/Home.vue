@@ -11,5 +11,10 @@ export default {
   components: {
     HelloWorld
   }
+  // beforeEnter: (to,from, next) => {
+  //   // ...
+  //   // Get Data from Server
+  //   http.get()...
+  // }
 }
 </script>
