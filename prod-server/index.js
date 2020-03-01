@@ -8,14 +8,15 @@ var _routes = require('./routes');
 
 var _env = require('./config/env');
 
+var _db = require('./config/db');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
 
-//import { connectToDB } from './config/db';
 
 (0, _env.setEnvironment)(app);
-//connectToDB();
+(0, _db.connectToDB)();
 (0, _routes.registerRoutes)(app);
 
 // All non-API requests made to the server, for example, http://www.homepage.com/,
