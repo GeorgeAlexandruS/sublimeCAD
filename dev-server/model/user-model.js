@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { StringUtil } from '../utilities/string-util';
-import bcrypt from 'bcrypt-nodejs';
+//import bcrypt from 'bcrypt-nodejs';
 
 const userSchema = new mongoose.Schema({
     username: String,
@@ -19,7 +19,7 @@ userSchema.virtual('fullName').get(function() {
 
 // Static methods that can be called from anywhere (e.g., User.passwordMatches)
 userSchema.statics.passwordMatches = function(password, hash) {
-    return bcrypt.compareSync(password, hash);
+  //  return bcrypt.compareSync(password, hash);
 }
 // Runs validation before saving a user
 userSchema.pre('save', function(next) {
@@ -27,7 +27,7 @@ userSchema.pre('save', function(next) {
     this.first = this.first.toLowerCase();
     this.last = this.last.toLowerCase();
     const unsafePassword = this.password;
-    this.password = bcrypt.hashSync(unsafePassword); // Will encrypt the user's password
+  //  this.password = bcrypt.hashSync(unsafePassword); // Will encrypt the user's password
     next();
 });
 
