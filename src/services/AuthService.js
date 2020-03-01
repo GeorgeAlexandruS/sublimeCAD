@@ -1,4 +1,4 @@
-import store from '../store';
+import store from '@/store';
 import { http } from './HttpService';
 import jwt from 'jsonwebtoken';
 
