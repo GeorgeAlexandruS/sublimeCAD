@@ -2,10 +2,10 @@ import express from 'express';
 const app = express();
 import { registerRoutes } from './routes';
 import { setEnvironment } from './config/env';
-//import { connectToDB } from './config/db';
+import { connectToDB } from './config/db';
 
 setEnvironment(app);
-//connectToDB();
+connectToDB();
 registerRoutes(app);
 
 // All non-API requests made to the server, for example, http://www.homepage.com/,
