@@ -1,6 +1,6 @@
 import { StringUtil } from '../../utilities/string-util';
-//import User from '../../model/user-model';
-//import { generateJWT } from '../../services/auth-service';
+// import User from '../../model/user-model';
+// import { generateJWT } from '../../services/auth-service';
 
 export function index(req, res) {
     // First verify that the user provided a username and a password

@@ -16,10 +16,10 @@ export default {
      method: 'GET'
    })
    //.then(res => res.json())
-   //.then(res => console.log(res));
+   .then(res => console.log(res));
 
-   .then(res => res.text())          // convert to plain text
-   .then(text => console.log(text))  // then log it outy
+  // .then(res => res.text())          // convert to plain text
+   //.then(text => console.log(text))  // then log it outy
  }
 }
 </script>
