@@ -1,7 +1,7 @@
 import User from '../../model/user-model';
 import Task from '../../model/task-model';
 import moment from 'moment';
-//import * as auth from '../../services/auth-service';
+import * as auth from '../../services/auth-service';
 
 export function index(req, res) {
     // FIND ALL TASKS
