@@ -1,5 +1,5 @@
 import { StringUtil } from '../../utilities/string-util';
-// import User from '../../model/user-model';
+import User from '../../model/user-model';
 
 // User Register
 export function index(req, res) {
