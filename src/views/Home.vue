@@ -7,14 +7,19 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'Home',
+  name: 'home',
   components: {
     HelloWorld
-  }
-  // beforeEnter: (to,from, next) => {
-  //   // ...
-  //   // Get Data from Server
-  //   http.get()...
-  // }
+  },
+  beforeCreate: function() {
+   fetch(this.$store.state.apiUrl + '/api/user', {
+     method: 'GET'
+   })
+   //.then(res => res.json())
+   //.then(res => console.log(res));
+
+   .then(res => res.text())          // convert to plain text
+   .then(text => console.log(text))  // then log it outy
+ }
 }
 </script>
