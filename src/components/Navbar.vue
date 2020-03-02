@@ -46,7 +46,7 @@
 </template>
 
 <script>
-    import * as auth from '@/services/AuthService';
+    import * as auth from '../services/AuthService';
 
     export default {
         name: 'Navbar',

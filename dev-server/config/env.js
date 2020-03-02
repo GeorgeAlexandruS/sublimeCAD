@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 
 /**
  * Determines the current environment and sets the appropriate variables
- * @param {Express App} app
+ * @param {Express App} app 
  */
 export function setEnvironment(app) {
     if (!process.env.NODE_ENV || process.env.NODE_ENV.toString().trim() !== 'production') {
@@ -17,7 +17,7 @@ export function setEnvironment(app) {
 
 /**
  * Used to set development environment variables
- * @param {Express App} app
+ * @param {Express App} app 
  */
 function setDevEnv(app) {
     process.env.NODE_ENV = 'development';
@@ -30,7 +30,7 @@ function setDevEnv(app) {
 
 /**
  * Used to set production environment variables
- * @param {Express App} app
+ * @param {Express App} app 
  */
 function setProdEnv(app) {
     process.env.NODE_ENV = 'production';

@@ -1,5 +1,0 @@
-=== VUE ===
-**vue create<name of the project>
--creates new vue project
-**npm run serve
--creates server
