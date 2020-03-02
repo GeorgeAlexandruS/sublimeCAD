@@ -19,7 +19,7 @@ userSchema.virtual('fullName').get(function() {
 
 // Static methods that can be called from anywhere (e.g., User.passwordMatches)
 userSchema.statics.passwordMatches = function(password, hash) {
-  return bcrypt.compareSync(password, hash);
+    return bcrypt.compareSync(password, hash);
 }
 // Runs validation before saving a user
 userSchema.pre('save', function(next) {

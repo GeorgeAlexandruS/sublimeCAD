@@ -30,7 +30,7 @@ export function index(req, res) {
 
 /**
  * Validates the index request method
- * @param {HTTP Request Body} body
+ * @param {HTTP Request Body} body 
  */
 function validateIndex(body) {
     let errors = '';

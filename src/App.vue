@@ -2,9 +2,7 @@
   <div id="app">
     <Navbar />
     <div id="app-container">
-      <div id="app-container">
       <router-view/>
-    </div>
     </div>
     <Footer />
   </div>
@@ -20,7 +18,8 @@
       Navbar,
       Footer
     },
-    beforeCreate: function(){
+    beforeCreate: function() {
+      // Ensure that on app boot, we check if the user is authenticated or not
       this.$store.dispatch('authenticate');
     }
   }

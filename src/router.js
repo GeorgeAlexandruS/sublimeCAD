@@ -1,26 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/Home.vue'
-import Login from '@/views/authentication/Login.vue'
-import Register from '@/views/authentication/Register.vue'
-import TasksAll from '@/views/tasks/TasksAll.vue'
-import TasksCreate from '@/views/tasks/TasksCreate.vue'
-import TasksEdit from '@/views/tasks/TasksEdit.vue'
-import * as auth from '../services/AuthService';
+import Home from './views/Home.vue'
+import Login from './views/authentication/Login.vue'
+import Register from './views/authentication/Register.vue'
+import TasksAll from './views/tasks/TasksAll.vue'
+import TasksCreate from './views/tasks/TasksCreate.vue'
+import TasksEdit from './views/tasks/TasksEdit.vue'
+import * as auth from './services/AuthService'
 
 Vue.use(Router)
 
-const routes = new Router({
-  routes: [{
+export default new Router({
+  routes: [
+    {
       path: '/',
       name: 'home',
       component: Home
     },
     {
-      path: '/@/views/tasks',
+      path: '/tasks',
       name: 'tasks-all',
       component: TasksAll,
-      beforeEnter: (toolbar, from, next) => {
+      beforeEnter: (to, from, next) => {
+        // Navigation Guard protects this route. User must be logged in, else will be routed to login page
         if (auth.isLoggedIn()) {
           next();
         } else {
@@ -32,7 +34,7 @@ const routes = new Router({
       path: '/tasks/new',
       name: 'tasks-create',
       component: TasksCreate,
-      beforeEnter: (toolbar, from, next) => {
+      beforeEnter: (to, from, next) => {
         if (auth.isLoggedIn()) {
           next();
         } else {
@@ -41,7 +43,7 @@ const routes = new Router({
       }
     },
     {
-      path: '/tasks:id',
+      path: '/tasks/:id',
       name: 'tasks-edit',
       component: TasksEdit,
       beforeEnter: (to, from, next) => {
@@ -68,7 +70,7 @@ const routes = new Router({
       path: '/login',
       name: 'login',
       component: Login,
-      beforeEnter: (toolbar, from, next) => {
+      beforeEnter: (to, from, next) => {
         if (!auth.isLoggedIn()) {
           next();
         } else {
@@ -84,18 +86,3 @@ const routes = new Router({
   linkActiveClass: 'active',
   mode: 'history'
 })
-
-// routes.beforeEach(to, from, next) => {
-// //Evaluate condition
-// //next('/home');
-// //next(false);
-// //if (isLoggedIn) {
-//   next();
-// } else {
-//   next('/login');
-// }
-
-//});
-
-
-export default routes;
