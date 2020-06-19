@@ -75,7 +75,7 @@ set NODE_ENV=production
 
 ## Author
 
-* **David Acosta** - [Portfolio](http://www.acostadavid.com/),  [YouTube](https://www.youtube.com/channel/UCKrHQelsiwrVUZ7v9nLCwgA)
+
 
 
 ## License
