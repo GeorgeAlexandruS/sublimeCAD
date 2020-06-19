@@ -1,6 +1,6 @@
 # sublimeCAD
 
-Isomorphic JavaScript with MEVN Stack
+a blog application
 
 ### Prerequisites
 
