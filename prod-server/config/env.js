@@ -44,7 +44,8 @@ function setDevEnv(app) {
     app.use(_bodyParser2.default.json()); // Allows parsing JSON from the client
     app.use((0, _morgan2.default)('dev')); // Log HTTP Requests to the node console (for debugging purposes)
     app.use((0, _cors2.default)()); // Enable Cross Origin Requests, since Vue.JS is on a different origin
-    process.env.DB_URL = 'mongodb://localhost:27017/vue-db';
+    // process.env.DB_URL = 'mongodb://localhost:27017/vue-db';
+    process.env.DB_URL = 'mongodb+srv://dbuser01:G7YGqU4iqUs3KBz7@sublimecad01-2ddm1.mongodb.net/test';
     process.env.TOKEN_SECRET = '27946982a9a4408996607fe95a6299f9';
 }
 
