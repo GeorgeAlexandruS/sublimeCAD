@@ -1,8 +1,3 @@
-# sublimeCAD
-
-a blog application
-
-### Prerequisites
 
 [NodeJS](https://nodejs.org)
 [MongoDB](https://www.mongodb.com/)
@@ -75,7 +70,7 @@ set NODE_ENV=production
 
 ## Author
 
-
+* **George Sfica** - [Portfolio](http://www.sublimeCAD.com/)
 
 
 ## License
