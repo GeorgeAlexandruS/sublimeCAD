@@ -1,8 +1,3 @@
-# Isomorphic-JavaScript-with-MEVN-Stack
-
-Isomorphic JavaScript with MEVN Stack[video], published by Packt
-
-### Prerequisites
 
 [NodeJS](https://nodejs.org)
 [MongoDB](https://www.mongodb.com/)
