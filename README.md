@@ -1,6 +1,6 @@
 # Isomorphic-JavaScript-with-MEVN-Stack
 
-Isomorphic JavaScript with MEVN Stack
+Isomorphic JavaScript with MEVN Stack[video], published by Packt
 
 ### Prerequisites
 
@@ -75,7 +75,7 @@ set NODE_ENV=production
 
 ## Author
 
-
+* **George Sfica** - [Portfolio](http://www.sublimeCAD.com/)
 
 
 ## License
