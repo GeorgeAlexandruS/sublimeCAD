@@ -21,7 +21,9 @@ var _bodyParser = require('body-parser');
 
 var _bodyParser2 = _interopRequireDefault(_bodyParser);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
 
 /**
  * Determines the current environment and sets the appropriate variables
@@ -54,7 +56,7 @@ function setDevEnv(app) {
  */
 function setProdEnv(app) {
     process.env.NODE_ENV = 'production';
-    process.env.DB_URL = 'mongodb+srv://dbuser01:G7YGqU4iqUs3KBz7@sublimecad01-2ddm1.mongodb.net/test';
+    process.env.DB_URL = 'mongodb+srv://dbuser007:nVhHWhOuaUpc6Rxu@subcaddb01-2ddm1.mongodb.net/subcaddb01?retryWrites=true&w=majority';
     process.env.TOKEN_SECRET = '9f4d50bfa6b2450a9ec766fc5104948e';
     app.use(_bodyParser2.default.json());
     app.use(_express2.default.static(__dirname + '/../../dist'));

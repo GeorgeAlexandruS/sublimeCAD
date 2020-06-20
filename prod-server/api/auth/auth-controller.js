@@ -13,7 +13,9 @@ var _userModel2 = _interopRequireDefault(_userModel);
 
 var _authService = require('../../services/auth-service');
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
 
 function index(req, res) {
     // First verify that the user provided a username and a password

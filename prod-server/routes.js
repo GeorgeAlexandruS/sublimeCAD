@@ -21,7 +21,9 @@ var _authRoutes = require('./api/auth/auth-routes');
 
 var _authRoutes2 = _interopRequireDefault(_authRoutes);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
 
 function registerRoutes(app) {
     app.use('/api', _tasksRoutes2.default);
