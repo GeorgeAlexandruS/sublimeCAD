@@ -11,7 +11,9 @@ var _userModel = require('../../model/user-model');
 
 var _userModel2 = _interopRequireDefault(_userModel);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+}
 
 // User Register
 function index(req, res) {
