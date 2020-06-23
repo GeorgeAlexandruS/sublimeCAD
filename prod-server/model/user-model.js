@@ -14,9 +14,7 @@ var _bcryptNodejs = require('bcrypt-nodejs');
 
 var _bcryptNodejs2 = _interopRequireDefault(_bcryptNodejs);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var userSchema = new _mongoose2.default.Schema({
     username: String,

@@ -10,11 +10,10 @@ var _env = require('./config/env');
 
 var _db = require('./config/db');
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
+
 
 (0, _env.setEnvironment)(app);
 (0, _db.connectToDB)();
@@ -33,5 +32,5 @@ app.get('*', function (req, res) {
 
 // Starts the server on the given port
 app.listen(3000, function () {
-    console.log('MEVN app listening on port 3000 in ' + process.env.NODE_ENV + ' mode!');
+    console.log('sublimeCAD app listening on port 3000 in ' + process.env.NODE_ENV + ' mode!');
 });
