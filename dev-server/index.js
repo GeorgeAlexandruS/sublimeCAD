@@ -23,5 +23,5 @@ app.get('*', (req, res) => {
 
 // Starts the server on the given port
 app.listen(3000, () => {
-    console.log('MEVN app listening on port 3000 in ' + process.env.NODE_ENV + ' mode!');
+    console.log('sublimeCAD app listening on port 3000 in ' + process.env.NODE_ENV + ' mode!');
 });

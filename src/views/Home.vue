@@ -1,17 +1,27 @@
 <template>
-  <div id="custom-home">
-    <HelloWorld />
-  </div>
+<div id="custom-home">
+    <Header />
+    <Whatis />
+    <Blogs />
+
+
+</div>
 </template>
 
 <script>
-  // @ is an alias to /src
-  import HelloWorld from '@/components/HelloWorld.vue'
+// @ is an alias to /src
 
-  export default {
-    name: 'home',
-    components: {
-      HelloWorld
-    }
+import Header from '@/components/Header.vue'
+import Whatis from '@/heroes/Whatis.vue'
+import Blogs from '@/heroes/Blogs.vue'
+
+export default {
+  name: 'home',
+  components: {
+    Header,
+    Whatis,
+    Blogs
+
   }
+}
 </script>
