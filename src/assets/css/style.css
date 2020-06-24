@@ -3737,7 +3737,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .footer-logo img {
     display: block;
-    max-width: 100%;
+    max-width: 50%;
 }
 
 .footer-widget.logo-widget .text {
@@ -6188,4 +6188,7 @@ body.hp-six {
 
 .custom-background {
   background-image: url(../img/con-cloud/hero-bg.png);
+}
+.logo > a > img{
+  max-width: 200px;
 }
