@@ -1,27 +1,24 @@
 <template>
-<div id="custom-home">
+  <div id="custom-home">
     <Header />
-    <Whatis />
-    <Blogs />
-
-
-</div>
+    <HeroWhatis />
+    <HeroBlogs />
+  </div>
 </template>
 
 <script>
-// @ is an alias to /src
+  // @ is an alias to /src
 
-import Header from '@/components/Header.vue'
-import Whatis from '@/heroes/Whatis.vue'
-import Blogs from '@/heroes/Blogs.vue'
+  import Header from '@/components/Header.vue'
+  import HeroWhatis from '@/heroes/HeroWhatis.vue'
+  import HeroBlogs from '@/heroes/HeroBlogs.vue'
 
-export default {
-  name: 'home',
-  components: {
-    Header,
-    Whatis,
-    Blogs
-
+  export default {
+    name: 'home',
+    components: {
+      Header,
+      HeroWhatis,
+      HeroBlogs
+    }
   }
-}
 </script>

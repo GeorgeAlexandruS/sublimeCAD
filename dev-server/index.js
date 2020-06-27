@@ -22,6 +22,6 @@ app.get('*', (req, res) => {
 })
 
 // Starts the server on the given port
-app.listen(3000, () => {
-    console.log('sublimeCAD app listening on port 3000 in ' + process.env.NODE_ENV + ' mode!');
+app.listen(443, () => {
+    console.log('sublimeCAD app listening on port 443 in ' + process.env.NODE_ENV + ' mode!');
 });
