@@ -6,6 +6,7 @@ import Register from './views/authentication/Register.vue'
 import BlogsAll from './views/blogs/BlogsAll.vue'
 import BlogsCreate from './views/blogs/BlogsCreate.vue'
 import BlogsEdit from './views/blogs/BlogsEdit.vue'
+import BlogRead from './views/blogs/BlogRead.vue'
 import * as auth from './services/AuthService'
 
 Vue.use(Router)
@@ -16,6 +17,11 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/blogs/read',
+      name: 'blog-read',
+      component: BlogRead
     },
     {
       path: '/blogs',
